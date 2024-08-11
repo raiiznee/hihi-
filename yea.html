@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Envelope with Love Letter</title> 
+  <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        .envelope {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #d3b18b;
+            border: 2px solid #a87d52;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 80px solid #d3b18b;
+        }
+        .letter {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 60px);
+            background: white;
+            border: 2px solid #a87d52;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+        }
+        .open-button {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #a87d52;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .open-button:hover {
+            background-color: #8c6444;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div class="envelope" onclick="toggleLetter()"> 
+    <div class="letter" id="letter"> 
+     <h2>Dear [ayse],</h2> 
+     <p>Thank you for all the reassurance you give me. Thank you for being my kakampi at all times, for being there through ups and downs, for being my leaning shoulder, for making me smile, and for making me feel important. Thank you for being my number one supporter, for accepting my flaws, and for helping me correct my mistakes. Thank you for working through things with me and for never considering ending things.</p>
+     <p></p> 
+     <p>Every moment we shared means a lot to me. 4 whole month with you na bebe. i love you.</p> 
+     <p>I promise to always support you, to stand by you through life's ups and downs, and to love you with all my heart.</p> 
+     <p>baby mo,<br>[Rai]</p> 
+    </div> 
+   </div> <button class="open-button" id="openButton" onclick="openEnvelope()">Open</button> 
+  </div> 
+  <script>
+        function openEnvelope() {
+            const letter = document.getElementById('letter');
+            const button = document.getElementById('openButton');
+            
+            letter.style.display = 'block';
+            button.style.display = 'none';
+        }
+    </script> 
+ 
+</body></html>
