@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no-button {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you know ba?</h1>
+    <button class="button yes-button" onclick="showDateQuestion()">Yes</button>
+    <button class="button no-button" onclick="alert('ngi bakit no?!?!??')">No</button>
+
+    <div id="date-question" style="display: none;">
+        <h2>I really miss you 😕 I wish I could hug you right now, pero i can't so im sending you this code </h2>
+        <button class="button yes-button" onclick="alert('Yayy!')">Yayy</button>
+        <button class="button no-button" onclick="alert('Ngii.')">Ngii</button>
+    </div>
+
+    <script>
+        function showDateQuestion() {
+            document.getElementById('date-question').style.display = 'block';
+        }
+    </script>
+
+</body></html>
