@@ -1,5 +1,4 @@
-# rezaghz.com 
-#source https://www.geeksforgeeks.org/draw-a-flower-using-turtle-in-python/
+
 import turtle
  
 # Set initial position
@@ -86,4 +85,4 @@ turtle.left (180)
 turtle.fd (60)
 turtle.right (90)
 turtle.circle (200,60)
-turtle.done()
+turtle.done()p
